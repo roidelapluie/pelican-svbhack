@@ -17,5 +17,10 @@
 {% endblock %}
 
 {% block footer %}
-<p><a href="{{ SITEURL }}/" class="button_accent">&larr; Back to Index</a></p>
+{%if not page.hide %}
+<p><a href="{{ SITEURL }}/wiki/" class="button_accent">&larr; Back to Wiki</a></p>
+{%endif%}
 {% endblock %}
+{%block menuwiki%}{%if not page.hide %} class="active"{%endif%}{%endblock%}
+{%block menuabout%}{%if page.title == "About me" %} class="active"{%endif%}{%endblock%}
+{%block menuexherbo%}{%if page.title == "Exherbo" %} class="active"{%endif%}{%endblock%}

@@ -28,7 +28,6 @@
     {% block title %}{{ SITENAME }}{% endblock %}
   </title>
 
-  {% include "modules/analytics.html" %}
 </head>
 
 <body>
@@ -41,21 +40,13 @@
         <img src="{{ SITEURL }}/theme/images/logo.png" alt="logo">
         {% endif %}
       </a>
-      <h2><a href="{{ SITEURL }}">{{ AUTHOR }}</a></h2>
+      <h2><a href="{{ SITEURL }}">{{ SITENAME }}</a></h2>
       <p>{{ TAGLINE }}</p>
       <ul>
-        {% for title, link in MENUITEMS %}
-        <li><a href="{{ link }}">{{ title }}</a></li>
-        {% endfor %}
-        {% if DISPLAY_PAGES_ON_MENU %}{% for p in pages %}
-        <li><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
-        {% endfor %}{% endif %}
-        {% for name, link in LINKS %}
-        <li><a href="{{ link }}" target="_blank">{{ name }}</a></li>
-        {% endfor %}
-        {% for name, link in SOCIAL %}
-        <li><a href="{{ link }}" target="_blank">{{ name }}</a></li>
-        {% endfor %}
+            <li><a{%block menublog%}{%endblock%} href="{{SITEURL}}/">blog</a></li>
+            <li><a{%block menuwiki%}{%endblock%} href="{{SITEURL}}/wiki/">wiki</a></li>
+            <li><a{%block menuexherbo%}{%endblock%} href="{{SITEURL}}/exherbo/">exherbo</a></li>
+            <li><a{%block menuabout%}{%endblock%} href="{{SITEURL}}/pages/about-me.html">about</a></li>
       </ul>
     </div>
   </aside>
@@ -84,7 +75,9 @@
     </footer>
 
     <div id="ending_message">
-      <p>&copy; {{ AUTHOR }}. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Theme by Giulio Fidente on <a href="https://github.com/giulivo/pelican-svbhack" target="_blank">github</a>. {% if INTERNET_DEFENSE_LEAGUE %}Member of the <a href="http://internetdefenseleague.org">Internet Defense League</a>{% endif %}.</p>
+    <p>Written by <a href="{{SITEURL}}/pages/about-me.html">Julien Pivotto</a>.
+    Licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/deed.en_US">Creative Commons Attribution 4.0 International License</a>.
+Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Theme by Giulio Fidente on <a href="https://github.com/giulivo/pelican-svbhack" target="_blank">github</a>. {% if INTERNET_DEFENSE_LEAGUE %}Member of the <a href="http://internetdefenseleague.org">Internet Defense League</a>{% endif %}.</p>
     </div>
   </main>
   {% include "modules/idl.html" %}
