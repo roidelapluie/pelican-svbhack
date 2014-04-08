@@ -2,9 +2,9 @@
 <html lang="{{ DEFAULT_LANG }}">
 
 <head>
-  <link rel="stylesheet/less" type="text/css" href="{{ SITEURL }}/theme/css/style.less">
-  <script src="{{ SITEURL }}/theme/js/less-1.5.0.min.js" type="text/javascript"></script>
-  <!-- <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/style.css"> -->
+  <!-- <link rel="stylesheet/less" type="text/css" href="{{ SITEURL }}/theme/css/style.less">
+  <script src="{{ SITEURL }}/theme/js/less-1.5.0.min.js" type="text/javascript"></script>-->
+  <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/style.css">
 
   <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/pygments.css">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Sans|PT+Serif|PT+Mono">
@@ -45,7 +45,6 @@
       <ul>
             <li><a{%block menublog%}{%endblock%} href="{{SITEURL}}/">blog</a></li>
             <li><a{%block menuwiki%}{%endblock%} href="{{SITEURL}}/wiki/">wiki</a></li>
-            <li><a{%block menuexherbo%}{%endblock%} href="{{SITEURL}}/exherbo/">exherbo</a></li>
             <li><a{%block menuabout%}{%endblock%} href="{{SITEURL}}/pages/about-me.html">about</a></li>
       </ul>
     </div>
@@ -81,5 +80,7 @@ Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Theme b
     </div>
   </main>
   {% include "modules/idl.html" %}
+<script src="{{ SITEURL }}/theme/js/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>InstantClick.init();</script>
 </body>
 </html>
