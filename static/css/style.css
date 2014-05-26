@@ -6,6 +6,13 @@ body {
   font-family: 'PT Sans', sans-serif;
   font-size: 18px;
 }
+.be{
+ background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NTAgMzkwIj4NCjxwYXRoIGQ9Im0wLDBoMTUwdjM5MGgtMTUweiIvPg0KPHBhdGggZmlsbD0iI2ZmZGUwMCIgZD0ibTE1MCwwaDE1MHYzOTBoLTE1MHoiLz4NCjxwYXRoIGZpbGw9IiNlMDAiIGQ9Im0zMDAsMGgxNTB2MzkwaC0xNTB6Ii8+DQo8L3N2Zz4NCg==');
+ width: 115.38461538462%;
+ height: 100%;
+ background-size: 100% 100%;
+
+}
 a {
   color: #000000;
   text-decoration: none;
