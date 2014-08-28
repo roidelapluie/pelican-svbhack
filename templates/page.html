@@ -1,8 +1,11 @@
 {% extends "base.html" %}
 {% block title %}{{ page.title }}{% endblock %}
 
-{% block header %}
-<p>Updated on {{ page.locale_date }}</p>
+{% block footer %}
+{%if not page.hide %}
+<p><a href="{{ SITEURL }}/wiki/" class="button_accent">&larr; Back to Wiki</a></p>
+{%endif%}
+<p class="footnote">Created on {{ page.locale_date }}{% if page.locale_update and page.locale_update != page.locale_date %}, last update on {{ page.locale_update }} (<a href="https://github.com/roidelapluie/blog/commits/master/content/pages/{{page.git_filename}}">changelog</a>){% endif %}.</p>
 {% endblock %}
 
 {% block content %}
@@ -16,10 +19,5 @@
 </article>
 {% endblock %}
 
-{% block footer %}
-{%if not page.hide %}
-<p><a href="{{ SITEURL }}/wiki/" class="button_accent">&larr; Back to Wiki</a></p>
-{%endif%}
-{% endblock %}
 {%block menuwiki%}{%if not page.hide %} class="active"{%endif%}{%endblock%}
-{%block menuabout%}{%if page.title == "About me" %} class="active"{%endif%}{%endblock%}
+{%block menuabout%}{%if page.title == "Julien Pivotto" %} class="active"{%endif%}{%endblock%}

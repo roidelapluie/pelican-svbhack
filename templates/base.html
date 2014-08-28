@@ -43,9 +43,9 @@
       <h2><a href="{{ SITEURL }}">{{ SITENAME }}</a></h2>
       <p>{{ TAGLINE }}</p>
       <ul>
-            <li><a{%block menublog%}{%endblock%} href="{{SITEURL}}/">blog</a></li>
+            <li><a{%block menublog%}{%endblock%} href="{{SITEURL}}/blog/">blog</a></li>
             <li><a{%block menuwiki%}{%endblock%} href="{{SITEURL}}/wiki/">wiki</a></li>
-            <li><a{%block menuabout%}{%endblock%} href="{{SITEURL}}/pages/about-me.html">about</a></li>
+            <li><a{%block menuabout%}{%endblock%} href="{{SITEURL}}/">about</a></li>
       </ul>
     </div>
   </aside>
@@ -54,7 +54,7 @@
     <header>
       {% block header %}
       <p>
-      <a href="{{ SITEURL }}">Index</a> &#124; <a href="{{ SITEURL }}/archives.html">Archives</a>
+      <a href="{{ SITEURL }}/blog/">Index</a> &#124; <a href="{{ SITEURL }}/archives.html">Archives</a>
       {% if FEED_ALL_ATOM %}
       &#124; <a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}">Atom Feed</a>
       {% endif %}
