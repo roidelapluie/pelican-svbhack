@@ -16,7 +16,7 @@
       <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>{% if not loop.last %},{% endif %}
       {% endfor %}
     </p>
-    <p>Posted on {{ article.locale_date }}</p>
+<p>Posted on {{ article.locale_date }}{% if article.locale_update and article.locale_update != article.locale_date %}, last update on {{ article.locale_update }}{% endif %}</p>
     {% endif %}
     {% if DISQUS_SITENAME %}
     <p>Comments: <a href="#" onclick="javascript:toggleComments();return false;">toggle</a></p>
