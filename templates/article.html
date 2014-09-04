@@ -6,7 +6,7 @@
 {% block title %}{{ article.title }}{% endblock %}
 
 {% block header %}
-<p>Posted on {{ article.locale_date }}{% if article.locale_update and article.locale_update != article.locale_date %}, last update on {{ article.locale_update }} (<a href="https://github.com/roidelapluie/blog/commits/master/content/articles/{{article.git_filename}}">changelog</a>){% endif %}</p>
+<p>Posted on {{ article.locale_date }}{% if article.locale_update and article.locale_update != article.locale_date %}, last update on {{ article.locale_update }}{% endif %} (<a href="https://github.com/roidelapluie/blog/tree/master/content/articles/{{article.git_filename}}">source</a> - <a href="https://github.com/roidelapluie/blog/commits/master/content/articles/{{article.git_filename}}">changelog</a>)</p>
 {% endblock %}
 
 {% block content %}
